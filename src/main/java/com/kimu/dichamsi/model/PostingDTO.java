@@ -21,6 +21,14 @@ public class PostingDTO {
     private String content;
     //좋아요 수
     private long like;
+    //이미지 URL
+    private String imageUrl;
 
-
+    public Posting toEntity(){
+        return Posting.builder()
+                .title(title)
+                .content(content)
+                .imageUrl(imageUrl)
+                .build();
+    }
 }
